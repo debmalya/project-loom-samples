@@ -8,16 +8,12 @@ public class HelloApp {
 
         Thread virtualThread1 = Thread.startVirtualThread(() -> {
             System.out.println("Hello world 1");
-//            Thread.dumpStack();
         });
 
-        Thread virtualThread2 = Thread.builder().virtual().task(() -> {
+        Thread virtualThread2 = Thread.ofVirtual().start(() -> {
             System.out.println("Hello world 2");
-        }).build();
-        virtualThread2.start();
+        });
 
         ThreadUtil.waitAll(virtualThread1, virtualThread2);
-
-
     }
 }
