@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 
 public class LoomMillionApp {
     public static void main(String[] args) {
-        /*
+
         List<Thread> threadList = IntStream.range(1, 1_000_000)
                 .mapToObj(i -> Thread.startVirtualThread(() -> {
                     ThreadUtil.sleep(i);
@@ -16,6 +16,6 @@ public class LoomMillionApp {
                 .collect(Collectors.toList());
 
         ThreadUtil.waitAll(threadList);
-        */
+
     }
 }
